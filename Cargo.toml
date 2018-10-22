@@ -1,0 +1,10 @@
+[package]
+name = "blog"
+version = "0.1.0"
+authors = ["Krish De Souza <kd913@ic.ac.uk>"]
+edition = "2018"
+
+[dependencies]
+mime = "0.3.12"
+hyper = "0.12.12"
+gotham = "0.2.1"
