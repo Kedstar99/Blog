@@ -7,76 +7,42 @@ extern crate bytes;
 extern crate env_logger;
 extern crate futures;
 
-use bytes::Bytes;
-use futures::sync::mpsc;
-use futures::Stream;
-
 use actix_web::http::{header, Method, StatusCode};
-use actix_web::middleware::session::{self, RequestSession};
+use actix_web::middleware::session::{self};
 use actix_web::{
-    error, fs, middleware, pred, server, App, Error, HttpRequest, HttpResponse, Path,
+    fs, middleware, pred, server, App, HttpRequest, HttpResponse,
     Result,
 };
-use futures::future::{result, FutureResult};
-use std::{env, io};
+use std::{env};
 
 /// favicon handler
 fn favicon(req: &HttpRequest) -> Result<fs::NamedFile> {
     Ok(fs::NamedFile::open("static/favicon.ico")?)
 }
 
-/// simple index handler
-fn welcome(req: &HttpRequest) -> Result<HttpResponse> {
-    println!("{:?}", req);
+fn blog(req: &HttpRequest) -> Result<fs::NamedFile> {
+    Ok(fs::NamedFile::open("static/blog.html")?.set_status_code(StatusCode::OK))
+}
 
-    // session
-    let mut counter = 1;
-    if let Some(count) = req.session().get::<i32>("counter")? {
-        println!("SESSION value: {}", count);
-        counter = count + 1;
-    }
+fn about(req: &HttpRequest) -> Result<fs::NamedFile> {
+    Ok(fs::NamedFile::open("static/about.html")?.set_status_code(StatusCode::OK))
+}
 
-    // set counter to session
-    req.session().set("counter", counter)?;
+fn experience(req: &HttpRequest) -> Result<fs::NamedFile> {
+    Ok(fs::NamedFile::open("static/experience.html")?.set_status_code(StatusCode::OK))
+}
 
-    // response
-    Ok(HttpResponse::build(StatusCode::OK)
-        .content_type("text/html; charset=utf-8")
-        .body(include_str!("../static/welcome.html")))
+fn projects(req: &HttpRequest) -> Result<fs::NamedFile> {
+    Ok(fs::NamedFile::open("static/projects.html")?.set_status_code(StatusCode::OK))
+}
+
+fn interests(req: &HttpRequest) -> Result<fs::NamedFile> {
+    Ok(fs::NamedFile::open("static/interests.html")?.set_status_code(StatusCode::OK))
 }
 
 /// 404 handler
 fn p404(req: &HttpRequest) -> Result<fs::NamedFile> {
     Ok(fs::NamedFile::open("static/404.html")?.set_status_code(StatusCode::NOT_FOUND))
-}
-
-/// async handler
-fn index_async(req: &HttpRequest) -> FutureResult<HttpResponse, Error> {
-    println!("{:?}", req);
-
-    result(Ok(HttpResponse::Ok().content_type("text/html").body(
-        format!("Hello {}!", req.match_info().get("name").unwrap()),
-    )))
-}
-
-/// async body
-fn index_async_body(path: Path<String>) -> HttpResponse {
-    let text = format!("Hello {}!", *path);
-
-    let (tx, rx_body) = mpsc::unbounded();
-    let _ = tx.unbounded_send(Bytes::from(text.as_bytes()));
-
-    HttpResponse::Ok()
-        .streaming(rx_body.map_err(|e| error::ErrorBadRequest("bad request")))
-}
-
-/// handler with path parameters like `/user/{name}/`
-fn with_param(req: &HttpRequest) -> HttpResponse {
-    println!("{:?}", req);
-
-    HttpResponse::Ok()
-        .content_type("text/plain")
-        .body(format!("Hello {}!", req.match_info().get("name").unwrap()))
 }
 
 fn main() {
@@ -96,33 +62,15 @@ fn main() {
             // register favicon
             .resource("/favicon", |r| r.f(favicon))
             // register simple route, handle all methods
-            .resource("/welcome", |r| r.f(welcome))
-            // with path parameters
-            .resource("/user/{name}", |r| r.method(Method::GET).f(with_param))
-            // async handler
-            .resource("/async/{name}", |r| r.method(Method::GET).a(index_async))
-            // async handler
-            .resource("/async-body/{name}", |r| r.method(Method::GET).with(index_async_body))
-            .resource("/test", |r| r.f(|req| {
-                match *req.method() {
-                    Method::GET => HttpResponse::Ok(),
-                    Method::POST => HttpResponse::MethodNotAllowed(),
-                    _ => HttpResponse::NotFound(),
-                }
-            }))
-            .resource("/error", |r| r.f(|req| {
-                error::InternalError::new(
-                    io::Error::new(io::ErrorKind::Other, "test"), StatusCode::INTERNAL_SERVER_ERROR)
-            }))
+            .resource("/blog", |r| r.f(blog))
+            .resource("/about", |r| r.f(about))
+            .resource("/experience", |r| r.f(experience))
+            .resource("/projects", |r| r.f(projects))
+            .resource("/interests", |r| r.f(interests))
             // static files
-            .handler("/static", fs::StaticFiles::new("static").unwrap())
+            .handler("/", fs::StaticFiles::new("static").unwrap())
             // redirect
-            .resource("/", |r| r.method(Method::GET).f(|req| {
-                println!("{:?}", req);
-                HttpResponse::Found()
-                    .header(header::LOCATION, "static/welcome.html")
-                    .finish()
-            }))
+            .resource("/", |r| r.f(blog))
             // default
             .default_resource(|r| {
                 // 404 for GET request
