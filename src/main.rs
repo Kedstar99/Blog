@@ -7,7 +7,7 @@ extern crate bytes;
 extern crate env_logger;
 extern crate futures;
 
-use actix_web::http::{header, Method, StatusCode};
+use actix_web::http::{Method, StatusCode};
 use actix_web::middleware::session::{self};
 use actix_web::{
     fs, middleware, pred, server, App, HttpRequest, HttpResponse,
