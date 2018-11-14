@@ -10,13 +10,15 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
   <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
     integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
 </head>
 
 <body>
 
   <div class="blog-masthead">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="collapse navbar-collapse" id="navbarColor01">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>
@@ -35,24 +37,23 @@
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/Kedstar99"><img height="30" src="GitHub-Mark-Light-64px.png"></a>
+            <a class="nav-link" href="https://github.com/Kedstar99"><i class="fab fa-github fa-lg"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/krish-de-souza-2008a2147/"><img height="30" src="linked-in.png"></a>
+            <a class="nav-link" href="https://www.linkedin.com/in/krish-de-souza-2008a2147/"><i class="fab fa-linkedin-in fa-lg"></i></a>
           </li>
         </ul>
       </div>
     </nav>
   </div>
 
-
   <div class="about-header mt-3">
-    <div class="container">
+    <div class="container-fluid">
       <h1>About myself</h1>
       <div class="media">
-        <img src="Myself.png" class="col-lg-2 img-fluid rounded-circle">
-        <div class="media-body mt-3">
-          <table class="table float-left">
+        <img src="Myself.png" class="align-self-center mr-3 rounded">
+        <div class="media-body">
+          <table class="table">
             <tbody>
               <tr>
                 <th>
@@ -72,39 +73,43 @@
               </tr>
             </tbody>
           </table>
+          <div class="container-fluid">
+            <p>
+              Hello and welcome to my blog. This is a personal space where I hope to document some of the cool things I
+              discover.
+              I am grateful for you to take time out to visit my site and hope you will visit again sometime.
+            </p>
+            <p>
+              In regards to myself, I am a young software developer working as an automation
+              test engineer at SolarFlare Ltd, Cambridge. This is after
+              recently graduating from Imperial College London after spending four years studying Software Engineering
+              (Meng). At this stage, I am eager to learn and apply my skills
+              to contribute back to the wider community.
+            </p>
+            <p>
+              Outside of work I am eager to learn as many new skills as I can. At present, I am learning Portuguese,
+              driving
+              and
+              cooking. I also am currently working on a variety of personal projects including this blog which is
+              written
+              using Actix-Web and Bootstrap.
+            </p>
+            <p>
+              If you would like to contact me, please feel free to send an email above or send a message on LinkedIn.
+              For
+              those who wish to speak privately,
+              my PGP public key and email can be found <a href="https://pgp.mit.edu/pks/lookup?op=vindex&search=0x2D54CBF1F5285B70">here</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  
-    <div class="container">
-      <p>
-        Hello and welcome to my blog. This is a personal space where I hope to document some of the cool things I discover.
-        I am grateful for you to take time out to visit my site and hope you will visit again sometime. 
-      </p>
-      <p>
-        In regards to myself, I am a young software developer working as an automation
-        test engineer at SolarFlare Ltd, Cambridge. This is after
-        recently graduating from Imperial College London after spending four years studying Software Engineering
-        (Meng). At this stage, I am eager to learn and apply my skills
-        to contribute back to the wider community.
-      </p>
-      <p>
-        Outside of work I am eager to learn as many new skills as I can. At present, I am learning Portuguese, driving and
-        cooking. I also am currently working on a variety of personal projects including this blog which is written using Actix-Web and Bootstrap.
-      </p>
-      <p>
-        If you would like to contact me, please feel free to send an email above or send a message on LinkedIn. For
-        those who wish to speak privately,
-        my PGP public key and email can be found <a href="https://pgp.mit.edu/pks/lookup?op=vindex&search=0x2D54CBF1F5285B70">here</a>.
-      </p>
-    </div>
-  
 
-    <div class="container">
+    <div class="container-fluid">
       <h2>Technical Skills</h2>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
       <p>During my course and projects, I have gained experience in a variety of languages and technical stacks. This
         includes C, C++, Java, Rust,
         Javascript and Python. I am also familiar with Haskell and Prolog.</p>
@@ -124,14 +129,11 @@
         convinient use. I have successfully utilised Docker and Bash for these purposes. If you want to learn more
         about some of these skills, please
         feel free to puruse some of the projects I have contributed to. These can be found <a href=/Projects>here </a>.
-      </p> 
-    </div> 
-    
-    <div class="container">
-       <h2>Experience</h2>
+          </p> </div> <div class="container-fluid">
+          <h2>Experience</h2>
     </div>
-    
-    <div class="container">
+
+    <div class="container-fluid">
       <div class="accordion" id="accordionExample">
         <div class="card">
 
@@ -242,10 +244,13 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
     crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
