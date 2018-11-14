@@ -17,8 +17,8 @@
 <body>
 
   <div class="blog-masthead">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 mx-5">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>
@@ -34,7 +34,7 @@
           </li>
         </ul>
       </div>
-      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 mx-5">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/Kedstar99"><i class="fab fa-github fa-lg"></i></a>
@@ -47,7 +47,7 @@
     </nav>
   </div>
 
-  <div class="about-header mt-3">
+  <div class="about-header mt-3 mx-5">
     <div class="container-fluid">
       <h1>About myself</h1>
       <div class="media">
@@ -75,14 +75,14 @@
           </table>
           <div class="container-fluid">
             <p>
-              Hello and welcome to my blog. This is a personal space where I hope to document some of the cool things I
-              discover.
-              I am grateful for you to take time out to visit my site and hope you will visit again sometime.
+              Hello and welcome to my blog.<br><br>
+              This is my personal sandbox where I hope to document some of the cool things I discover.
+              Thank you for taking the time to visit my site and I hope you will visit again sometime.
             </p>
             <p>
               In regards to myself, I am a young software developer working as an automation
               test engineer at SolarFlare Ltd, Cambridge. This is after
-              recently graduating from Imperial College London after spending four years studying Software Engineering
+              graduating from Imperial College London. At Imperial, I spent four years studying Software Engineering
               (Meng). At this stage, I am eager to learn and apply my skills
               to contribute back to the wider community.
             </p>
@@ -129,12 +129,15 @@
         convinient use. I have successfully utilised Docker and Bash for these purposes. If you want to learn more
         about some of these skills, please
         feel free to puruse some of the projects I have contributed to. These can be found <a href=/Projects>here </a>.
-          </p> </div> <div class="container-fluid">
-          <h2>Experience</h2>
+      </p>
     </div>
 
     <div class="container-fluid">
-      <div class="accordion" id="accordionExample">
+      <h2>Experience</h2>
+    </div>
+
+    <div class="container-fluid">
+      <div class="accordion" id="experienceAccordion">
         <div class="card">
 
           <div class="card-header" id="headingOne">
@@ -146,7 +149,7 @@
             </h5>
           </div>
 
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#experienceAccordion">
             <div class="card-body">
               <p>
                 For the last 6 months, I have been working as an automation engineer at SolarFlare. My role at the
@@ -183,7 +186,7 @@
             </h5>
           </div>
 
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#experienceAccordion">
             <div class="card-body">
               <p>
                 As part of my course, I was required to partake in a 6 month placment in industry. For these 6
@@ -234,6 +237,94 @@
         </div>
       </div>
     </div>
+
+    <div class="container-fluid">
+      <h2>Education</h2>
+    </div>
+
+    <div class="container-fluid">
+      <div class="accordion" id="educationAccordion">
+        <div class="card">
+
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="true" aria-controls="collapseThree">
+                Imperial College London (Meng Sofware Engineering G600) (2013-2017)
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#educationAccordion">
+            <div class="card-body">
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="false" aria-controls="collapseFour">
+                Leicester Grammar School (2001-2013)
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#educationAccordion">
+            <div class="card-body">
+              <p>
+                As part of my course, I was required to partake in a 6 month placment in industry. For these 6
+                months, I worked at a security company present in London.
+                This experience was interesting as I had a varied time building a variety of projects for the
+                company. This includes the following projects:
+              </p>
+              <ul class="mt-3">
+                <li>The first project that I was responsible for was designing a customer portal for the company.
+                  This portal had some unique security requirements
+                  as it needed to serve the company's protected IP. For this project, I made use of various web tools
+                  including Bootstrap, NodeJS + express and postgres.
+                  These were all hosted in a microservice system spread across various ESXi VMs. This project was
+                  interesting experience as it presented some interesting challenges
+                  with respect to encryption. It also enabled me to take a look at how to implement both client and
+                  server side SSL.
+                </li>
+                <li> The second project undertaken at the company was a project designed to monitor and authenticate
+                  users based on keyboard patterns. This project was a useful experience
+                  in exploring some various debugging capabilities within Linux. For example, I learnt how to create
+                  my own shared libary and use LD_PRELOAD to
+                  manipulate the dynamic loader in Linux to run my custom debugging functions. Similar capabilities
+                  were explored using strace and ptrace.
+
+                  In addition, this task was useful for learning how to build projects that integrate with wider and
+                  larger projects. For example, I learnt how to use scons,
+                  the capabilities of named pipes in Linux and various challenges with serializing and deserializing
+                  data between C/C++. Additionally, I learnt how to use
+                  Google's C++ testing capability to express and check the functionality of my program. This included
+                  how to use friend test to bypass encapsulation in C++.
+
+                  Similarly, this project made extensive use of pthreads which gave a unique insight into how to
+                  design and overcome concurrency issues within C.
+                </li>
+                <li>
+                  The third and final project was to improve a internal time-tracking utility used within the
+                  company. The program was designed in C# on Windows so gave some
+                  unique perspectives and challenges which I hadn't faced before. I improved the code base by adding
+                  additional functionality such as checking whether a
+                  user is away from the keyboard. I also learned how to design UIs in XAML/WPF.
+                </li>
+              </ul>
+              <p>
+                For more information about this internship, please contact me personally for references.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 
