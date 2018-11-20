@@ -12,7 +12,7 @@
     integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="card.css">
 </head>
 
 <body>
@@ -53,64 +53,85 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="thesis.png">
-              </div>
+          <div class="card g-100">
+            <img class="card-img-top" src="thesis.png">
+            <div class="card-content">
+              <span class="card-title">Masters Thesis on energy profiling on Linux
+                <i id="show" class="fa fa-ellipsis-v fa-lg float-right"></i>
+              </span>
+              <p class="card-text">
+                Final year individual project. A copy of my thesis can be found <a href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf">here.</a>
+                My project code can also be found <a href="https://github.com/Kedstar99/PowerKap">here.</a>
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title">PowerKap - An energy profiling project for Linux.</span> 
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <p>Energy awareness for a specific program can be a difficult aspect to measure. This element is becoming
+                increasingly important in an increasingly energy conscious world. Such a problem can currently be
+                difficult
+                to measure accurately quantify mainly because of the large amount of asynchronous and synchronous
+                aspects that make up an Operating System. With advanced schedulers, it is difficult to isolate exactly
+                how much energy can be attributed to a specific program. This is manly through the use of various
+                techniques
+                that buffer and consolidate data across different programs. As such, isolating the energy consumption
+                of a specific
+                program over it's execution can be difficult.
+                <br>
+                <br>
+                This project explores some of the current techniques that are available to profile energy consumption
+                of programs.
+                Within this project, I created a technique to profile the energy consumed by the CPU, RAM, GPU, battery
+                and network
+                components of a given program. This was subsequently tested across a wide range of benchmarks and
+                energy efficient/inefficient
+                programs that explore the effectiveness of my designed program.
+                <br>
+                <br>
+                I perform this comparison against a large amount of schedulers, governers and hardware along with
+                general program comparisons between
+                Firefox and Chrome. Further details of my program can seen in my <a href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf">thesis.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+              <img class="card-img-top" src="Sharify.png">
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Masters Thesis on energy profiling on Linux<i class="material-icons float-right">more_vert</i></span>
+                <span class="card-title">Group Project - Sharify
+                  <i id="show" class="fa fa-ellipsis-v fa-lg float-right"></i>
+                </span>
                 <p class="card-text">
-                  Final year individual project. A copy of my thesis can be found <a href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf">here.</a>
-                  My project code can also be found <a href="https://github.com/Kedstar99/PowerKap">here.</a>
+                  An AirBnB style app designed to fascilitate the sharing of common household items.</a>
                 </p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">PowerKap - An energy profiling project for Linux.<i class="material-icons right">close</i></span>
-                <p>Energy awareness for a specific program can be a difficult aspect to measure. This element is becoming
-                   increasingly important in an increasingly energy conscious world. Such a problem can currently be difficult
-                   to measure accurately quantify mainly because of the large amount of asynchronous and synchronous
-                   aspects that make up an Operating System. With advanced schedulers, it is difficult to isolate exactly 
-                   how much energy can be attributed to a specific program. This is manly through the use of various techniques
-                   that buffer and consolidate data across different programs. As such, isolating the energy consumption of a specific
-                   program over it's execution can be difficult.
-                   <br>
-                   <br>
-                   This project explores some of the current techniques that are available to profile energy consumption of programs.
-                   Within this project, I created a technique to profile the energy consumed by the CPU, RAM, GPU, battery and network
-                   components of a given program. This was subsequently tested across a wide range of benchmarks and energy efficient/inefficient
-                   programs that explore the effectiveness of my designed program.
-                   <br>
-                   <br>
-                   I perform this comparison against a large amount of schedulers, governers and hardware along with general program comparisons between
-                   Firefox and Chrome. Further details of my program can seen in my <a href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf">thesis.</a>
-                </p>
+                <span class="card-title">Group Project - Sharify</span> 
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                A supervisor at Imperial tasked us with creating a platform for the lending and borrowing of items. The key idea was that the items aren't being used by their owner all the time, and so could be lent out to others who need them. Sharify was created to bring about the closeness that neighbours in smaller towns could have, where they would simply go next door to borrow something they needed.
+                <br>
+                <br>
+                Sharify was developed across three platforms: a website, an Android app and an iOS app. These were serviced by a backend that handled the users, items and transactions. For this project, I was jointly responsible for the web-app for the site.
+                For this site, I helped develop routes using NodeJS + Express and MongoDB. I was also responsible for setting up authentication and developing a test framework using Supertest and MochaJS. Finally, I helped design
+                the client side iteractions using twitter bootstrap and JQuery.
+                <br>
+                <br>
+                An example prototype video for the site can be found <a href="https://www.youtube.com/watch?v=IKpMxZB25MM">here</a>. Source code and reports are available on request. 
               </div>
+            </div>
           </div>
-        </div>
-      <div class="col">
-        <div class="card">
-          <img class="card-img-top activator" src="">
-          <div class="card-body">
-            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-            <p><a href="#">This is a link</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <script src="card.js"></script>
 </body>
