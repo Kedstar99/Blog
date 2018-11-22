@@ -1,7 +1,16 @@
+.card .card-img-top{
+    height: 275px;
+}
+
+.card .card-content{
+    height:150px;
+}
+
 .card .card-action{
     padding: 20px;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
 }
+
 .card .card-action a{
     font-size: 15px;
     color: #ffab40;
