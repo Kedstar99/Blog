@@ -43,6 +43,166 @@
             class="fa fa-bars fa-1x"></i></span></button>
     </div>
   </nav>
+  <div class="project-header mt-3 mx-auto">
+    <div class="container">
+      <h1>Current Projects and Contributions</h1>
+      <p>
+        This year, one of my major goals has been to build a larger set of open source contributions. In this venture I
+        have
+        been rather successful as this year as I have managed to make multiple minor contributions to major projects in
+        2018.
+        This includes the following contributions.
+      </p>
+      <div id="accordion" class="my-3">
+
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              Fixed multiple shell issues/bugs in Valve's Proton software. [<a href="https://github.com/ValveSoftware/Proton/pull/1931">PR1931</a>,
+              <a href="https://github.com/ValveSoftware/Proton/pull/675">PR675</a>]
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                aria-controls="collapseOne">
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              Proton is a brand new mechanism introduced by Valve to enable Windows games to run on non-Windows
+              platforms. It works by integrating
+              various technologies such as WINE and DXVK. These tools translate Windows System calls and DirectX calls
+              to those which are Linux compatibles.
+              As a result of their use, these technologies have vastly expanded the number of games that are playable
+              on Linux.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              Fixed update checking in VSCode for snap users. [<a href="https://github.com/Microsoft/vscode/pull/63716">PR63716</a>]
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              VSCode is an editor provided by Microsoft and based on Electron. It offers IDE like features
+              across a variety of languages that aid in programming development.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              Enabled better ISO C compliance and build mechanisms for the project CKB-next. [<a href="https://github.com/ckb-next/ckb-next/pull/206">PR206</a>,
+              <a href="https://github.com/ckb-next/ckb-next/pull/221">PR221</a>,
+              <a href="https://github.com/ckb-next/ckb-next/pull/228">PR228</a>]
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree">
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              CKB-next is an open source driver that enables RGB and communication for Corsair keyboard products on
+              Linux platforms.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              Aided with packaging Thunderbird snaps for Ubuntu platforms via <a href="https://launchpad.net/thunderbird">snaps</a>.
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                aria-controls="collapseFour">
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body">
+              Thunderbird is an open source email and messaging client based on the Gecko rendering engine.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              Aided with packaging vlc snaps for better snap compliance. [<a href="https://github.com/videolan/vlc/pull/75">PR75</a>]
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                aria-controls="collapseFive">
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div class="card-body">
+              VLC is an open source media program that enables the playback of video and audio.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              Enabled snap theme support for the Adapta-GTK theme for snap packages. <br>
+              <a href="https://snapcraft.io/adapta-gtk-snap">
+                <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
+              </a>
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                aria-controls="collapseFive">
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div class="card-body">
+              Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
+              Linux.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p>
+        Through the above experiences, I have gained a decent amount of experience in contributing to a wide-variety of
+        packages.
+        This includes following through with feature requests from email all the way to implementation. In addition, I
+        learned and applied
+        a wide variety of skills that have proved useful for contributing. This includes the following.
+        <ul>
+          <li> Using Docker to build a wide variety projects.</li>
+          <li> Git, Mercurial and Bazaar support including how to sign my requests and publish them on Launchpad.</li>
+          <li> Various Bash vulnerabilities and static analysis tools inclulding shellcheck and pylint.</li>
+          <li> Providing meaningful commit messages, and proper etiquette for pull requests.</li>
+          <li> Using AQemu/QEMU to create build environments where Docker isn't possible.</li>
+        </ul>
+        In addition, this year I successfully completed Hacktoberfest. In doing so, contributed to a large variety of
+        Rust projects.
+        This was a valuable experience in understanding how Rust is currently being used for commercial projects.
+      </p>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-9">
+          <div class="text-center">
+            <img src="hacktoberfest.webp" class="img-fluid mx-auto d-block align-self-center"></img>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+
+      </p>
+    </div>
+  </div>
 
   <div class="project-header mt-3 mx-auto">
     <div class="container">
@@ -56,7 +216,8 @@
           <div class="card g-100">
             <img class="card-img-top" src="thesis.webp">
             <div class="card-content">
-              <span class="card-title"><h5>PowerKap</h5><i class="show fa fa-ellipsis-v fa-lg float-right"></i>
+              <span class="card-title">
+                <h5>PowerKap</h5><i class="show fa fa-ellipsis-v fa-lg float-right"></i>
               </span>
               <p class="card-text">
                 This was my final-year Masters project/thesis that explores the power profiling capabilities and
@@ -69,7 +230,9 @@
               </p>
             </div>
             <div class="card-reveal">
-              <span class="card-title"><h5>PowerKap</h5></span>
+              <span class="card-title">
+                <h5>PowerKap</h5>
+              </span>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
               <p>Energy awareness for a specific program can be a difficult aspect to measure. This element is becoming
                 increasingly important in an increasingly energy conscious world. Such a problem can currently be
@@ -103,7 +266,8 @@
           <div class="card g-100">
             <img class="card-img-top" src="sharify.webp">
             <div class="card-content">
-              <span class="card-title"><h5>Sharify</h5>
+              <span class="card-title">
+                <h5>Sharify</h5>
                 <i class="show fa fa-ellipsis-v fa-lg float-right"></i>
               </span>
               <p class="card-text">
@@ -139,7 +303,8 @@
           <div class="card g-100">
             <img class="card-img-top" src="wikimaster.webp">
             <div class="card-content">
-              <span class="card-title"> <h5>Wikimaster, A Wikipedia-based quiz game</h5>
+              <span class="card-title">
+                <h5>Wikimaster, A Wikipedia-based quiz game</h5>
                 <i class="show fa fa-ellipsis-v fa-lg float-right"></i>
               </span>
               <p class="card-text">
@@ -149,7 +314,9 @@
               </p>
             </div>
             <div class="card-reveal">
-              <span class="card-title"><h5>Wikimaster, A Wikipedia-based quiz game</h5></span>
+              <span class="card-title">
+                <h5>Wikimaster, A Wikipedia-based quiz game</h5>
+              </span>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
               <p>
                 WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles. <br>
@@ -174,7 +341,8 @@
           <div class="card g-100">
             <img class="card-img-top" src="pintos.webp">
             <div class="card-content">
-              <span class="card-title"> <h5>Pintos</h5>
+              <span class="card-title">
+                <h5>Pintos</h5>
                 <i class="show fa fa-ellipsis-v fa-lg float-right"></i>
               </span>
               <p class="card-text">
@@ -185,7 +353,9 @@
               </p>
             </div>
             <div class="card-reveal">
-              <span class="card-title"><h5>Pintos</h5></span>
+              <span class="card-title">
+                <h5>Pintos</h5>
+              </span>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
               <p>
                 This was a group project to implement Pintos under the specification listed previously. For this
@@ -208,7 +378,8 @@
           <div class="card g-100">
             <img class="card-img-top" src="wacc.webp">
             <div class="card-content">
-              <span class="card-title"> <h5>WACC</h5>
+              <span class="card-title">
+                <h5>WACC</h5>
                 <i class="show fa fa-ellipsis-v fa-lg float-right"></i>
               </span>
               <p class="card-text">
@@ -218,7 +389,9 @@
               </p>
             </div>
             <div class="card-reveal">
-              <span class="card-title"><h5>WACC</h5>></span>
+              <span class="card-title">
+                <h5>WACC</h5>>
+              </span>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
               <p>
                 This was a group project to implement WACC. This project was split up into multiple stages based on
@@ -240,15 +413,16 @@
           <div class="card g-100">
             <img class="card-img-top" src="pi.webp">
             <div class="card-content">
-              <span class="card-title"> <h5>Raspberry Pi project</h5>
-              <p class="card-text">
-                As part of first year projects, we created a ARM assembler and emulator in C. This was subsequently
-                used to write a custom
-                assembly script that ran leds in a specific pattern in bare-metal assembly.
-                <br>
-                <br>
-                An example of the assembly working can be found <a href="https://www.youtube.com/watch?v=cNdRP9X7RQE">here</a>.
-              </p>
+              <span class="card-title">
+                <h5>Raspberry Pi project</h5>
+                <p class="card-text">
+                  As part of first year projects, we created a ARM assembler and emulator in C. This was subsequently
+                  used to write a custom
+                  assembly script that ran leds in a specific pattern in bare-metal assembly.
+                  <br>
+                  <br>
+                  An example of the assembly working can be found <a href="https://www.youtube.com/watch?v=cNdRP9X7RQE">here</a>.
+                </p>
             </div>
           </div>
         </div>

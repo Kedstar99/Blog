@@ -25,7 +25,7 @@ fn blog(req: &HttpRequest) -> Result<fs::NamedFile> {
 }
 
 fn about(req: &HttpRequest) -> Result<fs::NamedFile> {
-    Ok(fs::NamedFile::open("static/about.html")?.set_status_code(StatusCode::OK))
+    Ok(fs::NamedFile::open("static/index.html")?.set_status_code(StatusCode::OK))
 }
 
 fn experience(req: &HttpRequest) -> Result<fs::NamedFile> {
@@ -63,7 +63,7 @@ fn main() {
             .resource("/favicon", |r| r.f(favicon))
             // register simple route, handle all methods
             .resource("/blog", |r| r.f(blog))
-            .resource("/about", |r| r.f(about))
+            .resource("/", |r| r.f(about))
             .resource("/experience", |r| r.f(experience))
             .resource("/projects", |r| r.f(projects))
             .resource("/interests", |r| r.f(interests))
